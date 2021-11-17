@@ -17,7 +17,7 @@ client.collectDefaultMetrics({ register });
 const server = http.createServer(async (req, res) => {
   // Retrieve route from request object
   const route = url.parse(req.url).pathname;
-
+  console.log('GET', route);
   switch (route) {
     case "/metrics":
       // Return all metrics the Prometheus exposition format
